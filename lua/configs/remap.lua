@@ -9,6 +9,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- delete the line below and append it to the end
+vim.keymap.set("n", "J", "mzJ`z")
 -- paste something into the selected area without overwriting the default register
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
