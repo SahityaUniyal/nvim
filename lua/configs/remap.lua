@@ -23,10 +23,5 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- delete without placing in register
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 
--- Commentary
--- keybinding is ctrl + /
-vim.keymap.set("n", "<C-_>", ":Commentary<CR>")
-vim.keymap.set("v", "<C-_>", ":Commentary<CR>")
-
 -- formats the selected json in json format
 vim.keymap.set("v", "jq", "!jq .<CR>")

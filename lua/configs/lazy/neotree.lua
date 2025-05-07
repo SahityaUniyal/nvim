@@ -9,6 +9,17 @@ return {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
         config = function ()
+            -- Configure neo-tree to show hidden files and folders
+            require("neo-tree").setup({
+                filesystem = {
+                    filtered_items = {
+                        visible = true,  -- Show hidden files and folders
+                        hide_dotfiles = false,
+                        hide_gitignored = false,
+                    },
+                },
+            })
+            
             vim.keymap.set("n","<C-n>", ":Neotree toggle<CR>")
             vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
         end
