@@ -16,11 +16,9 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
-
-            lspconfig.lua_ls.setup({})
-            lspconfig.gopls.setup({})
-            lspconfig.pyright.setup({})
+            vim.lsp.enable('pyright')
+            vim.lsp.enable('gopls')
+            vim.lsp.enable('lua_ls')
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
